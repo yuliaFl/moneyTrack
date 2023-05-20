@@ -5,9 +5,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import About from "./components/about";
 import Homepage from "./components/homepage";
 import Income from "./components/income";
-import Savings from "./components/savings";
-import Spendings from "./components/spendings";
 import Profile from "./components/profile";
+import CreateProfile from "./components/createProfile";
 
 const Stack = createNativeStackNavigator();
 
@@ -21,12 +20,11 @@ function MyStack() {
   return (
     <Stack.Navigator style={styles.container}>
       <Stack.Group screenOptions={options}>
+      <Stack.Screen name="CreateProfile" component={CreateProfile} />
       <Stack.Screen name="Income" component={Income} />
       <Stack.Screen name="Homepage" component={Homepage} />
-      <Stack.Screen name="About" component={About} />
-      <Stack.Screen name="Savings" component={Savings} />
-      <Stack.Screen name="Spendings" component={Spendings} />
       <Stack.Screen name="Profile" component={Profile} />
+      <Stack.Screen name="About" component={About} />
       </Stack.Group>
     </Stack.Navigator>
   );

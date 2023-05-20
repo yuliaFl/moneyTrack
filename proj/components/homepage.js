@@ -10,9 +10,11 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-export default function Homepage({ navigation }) {
+export default function Homepage({ navigation,route }) {
+  const {userName} = route.params;
   return (
     <View style={styles.Screen}>
+      <h2> Welcome back {userName}</h2>
       <View style={styles.nav}>
         <TouchableOpacity
           style={styles.buttonNav}
@@ -22,21 +24,9 @@ export default function Homepage({ navigation }) {
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.buttonNav}
-          onPress={() => navigation.navigate("Spendings")}
-        >
-          <Text style={styles.buttonText}>$$</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.buttonNav}
           onPress={() => navigation.navigate("Income")}
         >
-          <Text style={styles.buttonText}>In</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.buttonNav}
-          onPress={() => navigation.navigate("Savings")}
-        >
-          <Text style={styles.buttonText}>Save</Text>
+          <Text style={styles.buttonText}>$$</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.buttonNav}

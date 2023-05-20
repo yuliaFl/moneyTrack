@@ -22,21 +22,9 @@ export default function About({ navigation }) {
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.buttonNav}
-          onPress={() => navigation.navigate("Spendings")}
-        >
-          <Text style={styles.buttonText}>$$</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.buttonNav}
           onPress={() => navigation.navigate("Income")}
         >
-          <Text style={styles.buttonText}>In</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.buttonNav}
-          onPress={() => navigation.navigate("Savings")}
-        >
-          <Text style={styles.buttonText}>Save</Text>
+          <Text style={styles.buttonText}>$$</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.buttonNav}

@@ -10,9 +10,35 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-export default function Spendings({ navigation }) {
+export default function Profile({ navigation }) {
+  const [userName, setUserName] = useState("");
+  const [hourlyWage, setHourlyWage] = useState("");
   return (
     <View style={styles.Screen}>
+      <h2>What's your name? </h2>
+      <TextInput
+        style={styles.input}
+        placeholder="Enter First Name"
+        value={userName}
+        onChangeText={setUserName}
+      />
+      <h2>Enter hourly wage</h2>
+      <TextInput
+        style={styles.input}
+        placeholder="Enter Hourly wage"
+        value={hourlyWage}
+        onChangeText={setHourlyWage}
+      />
+      <br></br>
+      <Button
+        title="Save"
+        onPress={() => {
+          navigation.navigate("Homepage", {
+            userName,
+          });
+        }}
+      />
+      <br></br>
       <View style={styles.nav}>
         <TouchableOpacity
           style={styles.buttonNav}
@@ -22,21 +48,9 @@ export default function Spendings({ navigation }) {
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.buttonNav}
-          onPress={() => navigation.navigate("Spendings")}
-        >
-          <Text style={styles.buttonText}>$$</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.buttonNav}
           onPress={() => navigation.navigate("Income")}
         >
-          <Text style={styles.buttonText}>In</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.buttonNav}
-          onPress={() => navigation.navigate("Savings")}
-        >
-          <Text style={styles.buttonText}>Save</Text>
+          <Text style={styles.buttonText}>$$</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.buttonNav}
