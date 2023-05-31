@@ -10,10 +10,9 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-export default function Income({ navigation, route }) {
+export default function Income({ navigation }) {
   const [hours, setHours] = useState("");
   const [tips, setTips] = useState("");
-  const {hourlyWage} = route.params;
 
   const handleHoursChange = (text) => {
     setHours(text);
@@ -23,7 +22,7 @@ export default function Income({ navigation, route }) {
     setTips(text);
   };
 
-  const hourlyAmount = parseFloat(hours) * hourlyWage;
+  const hourlyAmount = parseFloat(hours) * 15.15;
   const result = hourlyAmount + parseFloat(tips);
 
   const calculateResult = () => {
@@ -57,24 +56,7 @@ export default function Income({ navigation, route }) {
       <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText}> Save </Text>
       </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.buttonNav}
-        onPress={() => navigation.navigate("Homepage")}
-      >
-        <Text style={styles.buttonText}>Home</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.buttonNav}
-        onPress={() => navigation.navigate("Income")}
-      >
-        <Text style={styles.buttonText}>$$</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.buttonNav}
-        onPress={() => navigation.navigate("Profile")}
-      >
-        <Text style={styles.buttonText}>P</Text>
-      </TouchableOpacity>
+    
     </View>
   );
 }

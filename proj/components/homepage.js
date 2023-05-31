@@ -11,30 +11,11 @@ import {
 } from "react-native";
 
 export default function Homepage({ navigation,route }) {
-  const {userName} = route.params;
+ // const {userName} = route.params;
   return (
     <View style={styles.Screen}>
-      <h2> Welcome back {userName}</h2>
-      <View style={styles.nav}>
-        <TouchableOpacity
-          style={styles.buttonNav}
-          onPress={() => navigation.navigate("Homepage")}
-        >
-          <Text style={styles.buttonText}>Home</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.buttonNav}
-          onPress={() => navigation.navigate("Income")}
-        >
-          <Text style={styles.buttonText}>$$</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.buttonNav}
-          onPress={() => navigation.navigate("Profile")}
-        >
-          <Text style={styles.buttonText}>P</Text>
-        </TouchableOpacity>
-      </View>
+      <h2> Welcome back </h2>
+    
     </View>
   );
 }

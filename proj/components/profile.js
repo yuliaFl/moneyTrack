@@ -12,28 +12,8 @@ import {
 
 export default function Profile({ navigation }) {
   return (
-    <View style={styles.Screen}>
-      
-      <View style={styles.nav}>
-        <TouchableOpacity
-          style={styles.buttonNav}
-          onPress={() => navigation.navigate("Homepage")}
-        >
-          <Text style={styles.buttonText}>Home</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.buttonNav}
-          onPress={() => navigation.navigate("Income")}
-        >
-          <Text style={styles.buttonText}>$$</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.buttonNav}
-          onPress={() => navigation.navigate("Profile")}
-        >
-          <Text style={styles.buttonText}>P</Text>
-        </TouchableOpacity>
-      </View>
+    <View style={styles.container}>
+  
     </View>
   );
 }
@@ -46,12 +26,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     paddingHorizontal: 10,
-  },
-  nav: {
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    marginHorizontal: 10,
   },
   input: {
     height: 40,
@@ -72,13 +46,5 @@ const styles = StyleSheet.create({
   buttonText: {
     color: "white",
     fontSize: 16,
-  },
-  buttonNav: {
-    height: 30,
-    width: 58,
-    backgroundColor: "green",
-    justifyContent: "center",
-    alignItems: "center",
-    borderRadius: 5,
   },
 });

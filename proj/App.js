@@ -2,7 +2,6 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
-import About from "./components/about";
 import Homepage from "./components/homepage";
 import Income from "./components/income";
 import Profile from "./components/profile";
@@ -18,13 +17,12 @@ function MyStack() {
     headerTitleStyle: { fontWeight: 'bold' },
   };
   return (
-    <Stack.Navigator style={styles.container}>
+    <Stack.Navigator style={styles.container} screenOptions={{headerShown:false}}>
       <Stack.Group screenOptions={options}>
       <Stack.Screen name="CreateProfile" component={CreateProfile} />
       <Stack.Screen name="Income" component={Income} />
       <Stack.Screen name="Homepage" component={Homepage} />
       <Stack.Screen name="Profile" component={Profile} />
-      <Stack.Screen name="About" component={About} />
       </Stack.Group>
     </Stack.Navigator>
   );
