@@ -11,11 +11,27 @@ import {
 } from "react-native";
 
 export default function Homepage({ navigation,route }) {
- // const {userName} = route.params;
+//const {userName} = route.params;
   return (
-    <View style={styles.Screen}>
-      <h2> Welcome back </h2>
-    
+    <View style={styles.container}>
+      <h2> Welcome back ----- </h2>
+      <TouchableOpacity style={styles.button}  onPress={() => {
+          navigation.navigate("Log");
+        }}>
+        <Text style={styles.buttonText}>Worked today</Text>
+      </TouchableOpacity>
+      <br></br>
+      <TouchableOpacity style={styles.button}  onPress={() => {
+          navigation.navigate("PassedDate");
+        }}>
+        <Text style={styles.buttonText}>Log passed date</Text>
+      </TouchableOpacity>
+      <br></br>
+      <TouchableOpacity style={styles.button}  onPress={() => {
+          navigation.navigate("Income");
+        }}>
+        <Text style={styles.buttonText}>Money made</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -54,13 +70,5 @@ const styles = StyleSheet.create({
   buttonText: {
     color: "white",
     fontSize: 16,
-  },
-  buttonNav: {
-    height: 30,
-    width: 58,
-    backgroundColor: "green",
-    justifyContent: "center",
-    alignItems: "center",
-    borderRadius: 5,
   },
 });

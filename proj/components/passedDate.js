@@ -10,13 +10,15 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-export default function Income({ navigation }) {
+export default function PassedDate({ navigation,route }) {
   return (
     <View style={styles.container}>
-      <h2>Data for past </h2>
+      <h2> PassedDate</h2>
     </View>
+    //https://www.youtube.com/watch?v=22txA5uRhHo
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -26,6 +28,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     paddingHorizontal: 10,
+  },
+  nav: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    marginHorizontal: 10,
   },
   input: {
     height: 40,

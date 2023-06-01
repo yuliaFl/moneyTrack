@@ -1,37 +1,26 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import Homepage from "./components/homepage";
-import Income from "./components/income";
+import Log from "./components/log";
 import Profile from "./components/profile";
-import CreateProfile from "./components/createProfile";
+import Income from "./components/income";
+import PassedDate from "./components/passedDate";
+import CreateProfileScreen from "./components/createProfile";
 
-const Stack = createNativeStackNavigator();
-
-function MyStack() {
-  var options = {
-    headerStyle: { backgroundColor: '#262361' },
-    headerTintColor: 'white',
-    headerTitleAlign: 'center',
-    headerTitleStyle: { fontWeight: 'bold' },
-  };
-  return (
-    <Stack.Navigator style={styles.container} screenOptions={{headerShown:false}}>
-      <Stack.Group screenOptions={options}>
-      <Stack.Screen name="CreateProfile" component={CreateProfile} />
-      <Stack.Screen name="Income" component={Income} />
-      <Stack.Screen name="Homepage" component={Homepage} />
-      <Stack.Screen name="Profile" component={Profile} />
-      </Stack.Group>
-    </Stack.Navigator>
-  );
-}
+const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <MyStack />
+      <Tab.Navigator screenOptions={{ headerShown: false }}>
+      <Tab.Screen name="Homepage" component={Homepage} />
+      <Tab.Screen name="Log" component={Log} />
+      <Tab.Screen name="PassedDate" component={PassedDate}/>
+      <Tab.Screen name="Income" component={Income} />
+      <Tab.Screen name="Profile" component={Profile} />
+      </Tab.Navigator>
     </NavigationContainer>
   );
 }
@@ -44,3 +33,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+
+//         <Tab.Screen name="CreateProfileScreen" component={CreateProfileScreen} />

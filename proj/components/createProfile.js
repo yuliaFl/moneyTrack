@@ -1,25 +1,8 @@
 import * as React from "react";
 import { useState } from "react";
 import { StyleSheet, View, TextInput, Button } from "react-native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Homepage from "./homepage";
-import Income from "./income";
-import Profile from "./profile";
 
-const Tab = createBottomTabNavigator();
-
-export default function CreateProfile({ navigation }) {
-  return (
-    <Tab.Navigator screenOptions={{headerShown:false}}>
-      <Tab.Screen name="CreateProfileScreen" component={CreateProfileScreen} />
-      <Tab.Screen name="Homepage" component={Homepage} />
-      <Tab.Screen name="Income" component={Income} />
-      <Tab.Screen name="Profile" component={Profile} />
-    </Tab.Navigator>
-  );
-}
-
-function CreateProfileScreen({ navigation }) {
+export default function CreateProfileScreen({ navigation }) {
   const [userName, setUserName] = useState("");
   const [hourlyWage, setHourlyWage] = useState("");
 
