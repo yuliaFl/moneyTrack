@@ -10,7 +10,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-export default function Income({ navigation }) {
+export default function LogIncome({ navigation }) {
   const [hours, setHours] = useState("");
   const [tips, setTips] = useState("");
 
@@ -56,6 +56,13 @@ export default function Income({ navigation }) {
       <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText}> Save </Text>
       </TouchableOpacity>
+      <br></br>
+      <TouchableOpacity style={styles.button}  onPress={() => {
+          navigation.navigate("PassedIncome");
+        }}>
+        <Text style={styles.buttonText}>Log passed date</Text>
+      </TouchableOpacity>
+      <br></br>
     </View>
   );
 }

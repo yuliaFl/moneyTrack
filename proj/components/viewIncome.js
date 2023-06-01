@@ -10,7 +10,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-export default function Income({ navigation }) {
+export default function ViewIncome({ navigation }) {
   return (
     <View style={styles.container}>
       <h2>Data for past </h2>

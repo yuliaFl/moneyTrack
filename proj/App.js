@@ -3,10 +3,10 @@ import { StyleSheet, Text, View } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import Homepage from "./components/homepage";
-import Log from "./components/log";
+import LogIncome from "./components/logIncome";
 import Profile from "./components/profile";
-import Income from "./components/income";
-import PassedDate from "./components/passedDate";
+import ViewIncome from "./components/viewIncome";
+import PassedIncome from "./components/passedIncome";
 import CreateProfileScreen from "./components/createProfile";
 
 const Tab = createBottomTabNavigator();
@@ -15,10 +15,10 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator screenOptions={{ headerShown: false }}>
-      <Tab.Screen name="Homepage" component={Homepage} />
-      <Tab.Screen name="Log" component={Log} />
-      <Tab.Screen name="PassedDate" component={PassedDate}/>
-      <Tab.Screen name="Income" component={Income} />
+      <Tab.Screen name="PassedIncome" component={PassedIncome}/>
+      <Tab.Screen name="Home" component={Homepage} />
+      <Tab.Screen name="Log" component={LogIncome} />
+      <Tab.Screen name="View" component={ViewIncome} />
       <Tab.Screen name="Profile" component={Profile} />
       </Tab.Navigator>
     </NavigationContainer>
@@ -35,4 +35,5 @@ const styles = StyleSheet.create({
 });
 
 
-//         <Tab.Screen name="CreateProfileScreen" component={CreateProfileScreen} />
+// <Tab.Screen name="CreateProfileScreen" component={CreateProfileScreen} />
+// 

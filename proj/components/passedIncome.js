@@ -9,12 +9,21 @@ import {
   Button,
   TouchableOpacity,
 } from "react-native";
+import {Calendar, LocaleConfig} from 'react-native-calendars';
 
-export default function PassedDate({ navigation,route }) {
+export default function PassedIncome({ navigation,route }) {
+  const [selected, setSelected] = useState('');
   return (
     <View style={styles.container}>
-      <h2> PassedDate</h2>
-    </View>
+    <Calendar
+    onDayPress={day => {
+      setSelected(day.dateString);
+    }}
+    markedDates={{
+      [selected]: {selected: true, disableTouchEvent: true, selectedDotColor: 'orange'}
+    }}
+  />
+  </View>
     //https://www.youtube.com/watch?v=22txA5uRhHo
   );
 }

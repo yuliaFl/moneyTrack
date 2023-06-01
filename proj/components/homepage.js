@@ -16,19 +16,19 @@ export default function Homepage({ navigation,route }) {
     <View style={styles.container}>
       <h2> Welcome back ----- </h2>
       <TouchableOpacity style={styles.button}  onPress={() => {
-          navigation.navigate("Log");
+          navigation.navigate("LogIncome");
         }}>
         <Text style={styles.buttonText}>Worked today</Text>
       </TouchableOpacity>
       <br></br>
       <TouchableOpacity style={styles.button}  onPress={() => {
-          navigation.navigate("PassedDate");
+          navigation.navigate("PassedIncome");
         }}>
         <Text style={styles.buttonText}>Log passed date</Text>
       </TouchableOpacity>
       <br></br>
       <TouchableOpacity style={styles.button}  onPress={() => {
-          navigation.navigate("Income");
+          navigation.navigate("ViewIncome");
         }}>
         <Text style={styles.buttonText}>Money made</Text>
       </TouchableOpacity>
