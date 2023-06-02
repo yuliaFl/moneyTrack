@@ -22,13 +22,13 @@ export default function Homepage({ navigation,route }) {
       </TouchableOpacity>
       <br></br>
       <TouchableOpacity style={styles.button}  onPress={() => {
-          navigation.navigate("PassedIncome");
+          navigation.navigate("PassedDate");
         }}>
         <Text style={styles.buttonText}>Log passed date</Text>
       </TouchableOpacity>
       <br></br>
       <TouchableOpacity style={styles.button}  onPress={() => {
-          navigation.navigate("ViewIncome");
+          navigation.navigate("View");
         }}>
         <Text style={styles.buttonText}>Money made</Text>
       </TouchableOpacity>
